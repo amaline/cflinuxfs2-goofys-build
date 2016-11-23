@@ -13,7 +13,7 @@ dependencies:
      - docker info
      - docker build -t build-img .
      - docker create --name build-cont build-img
-     - docker cp build-cont:bin/goofys goofys
+     - docker cp build-cont:work/bin/goofys goofys
      - chmod +x ./makesources.sh ./deploy.sh
      - ./makesources.sh
 
