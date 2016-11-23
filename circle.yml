@@ -11,7 +11,7 @@ machine:
 dependencies:
   override:
      - docker info
-     - docker build -t build-img .
+     - docker build --rm=false -t build-img .
      - docker create --name build-cont build-img
      - docker cp build-cont:work/bin/goofys goofys
      - chmod +x ./makesources.sh ./deploy.sh
